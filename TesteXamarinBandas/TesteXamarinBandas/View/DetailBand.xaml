@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesteXamarinBandas.View.DetailBand"
+             Title="{Binding DetailBand.Name}">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray" Padding="8">
+            <Label Text="{Binding DetailBand.Id}" />
+            <Label Text="{Binding DetailBand.FullName}" FontAttributes="Bold" TextColor="Black" />
+            <Label Text="{Binding DetailBand.FullGenre}" FontAttributes="Bold" TextColor="Black" />
+            <Image Source="{Binding DetailBand.Image}" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding DetailBand.FullCountry}" FontAttributes="Bold" TextColor="Black" />
+                <Image Source="{Binding DetailBand.CountryFlag}" />
+            </StackLayout>
+            <Label Text="{Binding DetailBand.FullWebsite}" FontAttributes="Bold" TextColor="Black" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
