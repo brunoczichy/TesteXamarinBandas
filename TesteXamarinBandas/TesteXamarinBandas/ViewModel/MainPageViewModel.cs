@@ -5,16 +5,18 @@ using System.Reflection;
 using System.Text;
 using Newtonsoft.Json;
 using System.Net;
+using EventPlusX;
 
 namespace TesteXamarinBandas
 {
-    class MainPageViewModel
+    class MainPageViewModel : BaseViewModel
     {
         // Construtor da ViewModel da MainPage
         public MainPageViewModel()
         {
             CarregarArquivo();
             CarregarBandas();
+            OnPropertyChanged("ListBands");
         }
 
         private void CarregarBandas()
