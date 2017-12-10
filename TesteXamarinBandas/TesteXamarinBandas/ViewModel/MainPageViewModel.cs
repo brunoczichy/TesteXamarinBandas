@@ -6,14 +6,18 @@ using System.Text;
 using Newtonsoft.Json;
 using System.Net;
 using EventPlusX;
+using TesteXamarinBandas.View;
 
 namespace TesteXamarinBandas
 {
     class MainPageViewModel : BaseViewModel
     {
+        MainView mainView;
+
         // Construtor da ViewModel da MainPage
-        public MainPageViewModel()
+        public MainPageViewModel(MainView mainView)
         {
+            this.mainView = mainView;
             CarregarArquivo();
             CarregarBandas();
             OnPropertyChanged("ListBands");
@@ -30,7 +34,11 @@ namespace TesteXamarinBandas
                 item.Image = bandaConsulta.Image;
                 item.Name = bandaConsulta.Name;
                 item.Website = bandaConsulta.Website;
+                
             }
+
+            mainView.LoadGrid(ListBands);
+
         }
 
         // Método que carrega o arquivo para o projeto

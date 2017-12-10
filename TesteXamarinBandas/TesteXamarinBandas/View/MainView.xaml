@@ -1,34 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="TesteXamarinBandas.View.MainView"
-              xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
               Title="Bandas"
-              ItemsSource="{Binding ListBands}">
-    <CarouselPage.ItemTemplate>
-        <DataTemplate>
-            <ContentPage>
-                <xfg:ContentPageGloss.BackgroundGradient>
-                    <xfg:Gradient Rotation="15">
-                        <xfg:GradientStep StepColor="#8bc5ff" StepPercentage=".0" />
-                        <xfg:GradientStep StepColor="#c5c5c5" StepPercentage=".5" />
-                        <xfg:GradientStep StepColor="#d6d6d6" StepPercentage="1" />
-                    </xfg:Gradient>
-                </xfg:ContentPageGloss.BackgroundGradient>
-                <StackLayout Padding="8">
-                    <Image Source="{Binding Image}" Margin="60" />
-                    <Label Text="{Binding Name}" XAlign="Center" FontAttributes="Bold" />
-                    <Label Text="{Binding Genre}" XAlign="Center" />
-                    <Label Text="{Binding Country}" XAlign="Center" />
-                    <Image Source="{Binding CountryFlag}" />
-                    <Label Text="{Binding Website}" XAlign="Center">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer 
-                                Tapped="urlTapped" />
-                        </Label.GestureRecognizers>
-                    </Label>
-                </StackLayout>
-            </ContentPage>
-        </DataTemplate>
-    </CarouselPage.ItemTemplate>
-</CarouselPage>
+              >
+    <ScrollView>
+        <Grid x:Name="GridBands" Padding="8" BackgroundColor="LightGray">
+        </Grid>
+    </ScrollView>
+</ContentPage>

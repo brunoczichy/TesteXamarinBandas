@@ -5,10 +5,9 @@
              Title="{Binding DetailBand.Name}">
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightGray" Padding="8">
-            <Label Text="{Binding DetailBand.Id}" />
+            <Image Source="{Binding DetailBand.Image}" HeightRequest="200" Aspect="Fill"/>
             <Label Text="{Binding DetailBand.FullName}" FontAttributes="Bold" TextColor="Black" />
             <Label Text="{Binding DetailBand.FullGenre}" FontAttributes="Bold" TextColor="Black" />
-            <Image Source="{Binding DetailBand.Image}" />
             <StackLayout Orientation="Horizontal">
                 <Label Text="{Binding DetailBand.FullCountry}" FontAttributes="Bold" TextColor="Black" />
                 <Image Source="{Binding DetailBand.CountryFlag}" />
