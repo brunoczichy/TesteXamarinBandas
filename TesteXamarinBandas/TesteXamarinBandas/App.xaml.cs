@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using TesteXamarinBandas.View;
 using Xamarin.Forms;
 
 namespace TesteXamarinBandas
@@ -13,7 +13,7 @@ namespace TesteXamarinBandas
 		{
 			InitializeComponent();
 
-			AppNavigation = new NavigationPage(new MainPage());
+        	AppNavigation = new NavigationPage(new MainView());
             AppNavigation.BarBackgroundColor = Color.Navy;
             AppNavigation.BarTextColor = Color.Wheat;
             MainPage = AppNavigation;
